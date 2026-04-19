@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Qpid</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/x-icon" href="hearts.png">
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+</head>
+<body>
+  <div class="container" hidden>
+    <h1>Qpid</h1>
+    <div id="mainPage">
+      <form id="dataForm">
+        <h2 id="welcome">Welcome back baby! ❤️</h2>
+        <h2>Tell me about your day! 😊</h2>
+        <label for="input1">What was something that made you happy today?</label>
+        <textarea id="input1" rows="3" width="100%" placeholder="٩(｡•́‿•̀｡)۶"></textarea>
+        <label for="input2">What was something that could have been better about your day?</label>
+        <textarea id="input2" rows="3" width="100%" placeholder="(;￣Д￣)"></textarea>
+        <label for="input3">What was something that reminded you of me today?</label>
+        <textarea id="input3" rows="3" width="100%" placeholder="❤(≧◡≦)❤"></textarea>
+        <label for="moodSlider">How well did you feel today? <span id="moodValue">5</span>/10</label>
+        <input type="range" id="moodSlider" name="mood" min="1" max="10" step="1" value="5">
+        <div class="mood-labels">
+          <span class="mood-left">1 — Poor</span>
+          <span class="mood-right">10 — Excellent</span>
+        </div>
+        <button id="submitBtn" type="submit">Submit</button>
+      </form>
+      <div id="submitted" hidden>
+        <h2>You've submitted your entry for today! ❤️</h2>
+        <h2>Come back tomorrow or revisit the archives! 😊</h2>
+        <button id="viewArchive" type="button">Archives</button>
+      </div>
+    </div>
+    <div id="archive" hidden>
+      <h2 id="archiveTitle"></h2>
+      <ul id="archiveList"></ul>
+      <table id="archivePage" table-layout="fixed">
+        <tr>
+          <td><button id="archivePrev">Previous</button></td>
+          <td><p id="archivePageInfo"></p></td>
+          <td><button id="archiveNext">Next</button></td>
+        </tr>
+      </table>
+      <!-- <button id="closeArchive">Back</button> -->
+      <button id="swapCollection"></button>
+    </div>
+    <div id="details" hidden>
+      <h2 id="detailsTitle"></h2>
+      <p>What was something that made you happy today?</p>
+      <textarea class="detailField" id="detailField1" readonly></textarea>
+      <p>What was something that could have been better about your day?</p>
+      <textarea class="detailField" id="detailField2" readonly></textarea>
+      <p>What was something that reminded you of me today?</p>
+      <textarea class="detailField" id="detailField3" readonly></textarea>
+      <p>Mood (1 — Poor, 10 — Excellent):</p>
+      <p class="detailField" id="detailMood"></p>
+      <table id="detailsPage" table-layout="fixed">
+        <tr>
+          <td><button id="detailsPrev">Previous</button></td>
+          <td><p id="detailsPageInfo"></p></td>
+          <td><button id="detailsNext">Next</button></td>
+        </tr>
+      </table>
+      <button id="closeDetails">Close</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
