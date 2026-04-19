@@ -1,4 +1,4 @@
-*{box-sizing:border-box;font-family:Garamond,sans-serif;--small:1rem;--medium:1.75rem;--large:2.5rem;}
+*{box-sizing:border-box;font-family:Garamond,sans-serif;--small:1rem;--medium:1.25rem;--large:2.5rem;}
 body{margin:0;background-image:url('hearts-background.jpg');background-repeat:repeat;background-size:100%;}
 form{flex-direction:row;}
 input{flex:1;padding:10px;border:1px solid #d7e0ea;border-radius:6px;font-size:var(--small);width:100%;}
