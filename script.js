@@ -98,7 +98,8 @@ function openDetails(collectionName, id){
   document.getElementById('detailField1').textContent = `${data.field1 || ''}`;
   document.getElementById('detailField2').textContent = `${data.field2 || ''}`;
   document.getElementById('detailField3').textContent = `${data.field3 || ''}`;
-  document.getElementById('detailsTitle').textContent = `${archiveTitle.textContent} - ${id.split('T')[0]}`;
+  document.getElementById('detailsTitle').textContent = `${archiveTitle.textContent}`;
+  document.getElementById('detailsDate').textContent = `${id.split('T')[0]}`;
   document.getElementById('details').hidden = false;
   document.getElementById('archive').hidden = true;
 
