@@ -8,7 +8,7 @@ h2{font-size:var(--medium);margin:0 0 12px;text-align:center;}
 h3{font-size:var(--small);margin:0 0 12px;text-align:center;}
 p{font-size:var(--small);}
 label{font-size:var(--small);display:block;}
-textarea,.detailField{padding:10px;border:1px solid #d7e0ea;border-radius:6px;font-size:var(--small);margin-top:4px;margin-bottom:10px;width:100%;resize:vertical;min-height:3rem;}
+textarea,.detailField{padding:10px;border:1px solid #d7e0ea;border-radius:6px;font-size:var(--small);margin-top:4px;margin-bottom:10px;width:100%;resize:vertical;min-height:8rem;}
 button{display:block;padding:10px;background:#fff0f0;border:1px solid #d7e0ea;border-radius:6px;cursor:pointer;margin:4px auto 4px;width:50vw;max-width:200px;font-size:var(--small);}
 button:active{transform:translateY(1px)}
 table{margin-top:12px;width:100%;}
